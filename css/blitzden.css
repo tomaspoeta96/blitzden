@@ -1,0 +1,602 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+@font-face{
+	font-family: dosisBold;
+    src: url("Fonts/dosis-bold.ttf");
+}
+
+@font-face{
+	font-family: dosis;
+    src: url("Fonts/dosis-book.ttf");
+}
+
+@font-face{
+	font-family: dosisLight;
+    src: url("Fonts/dosis-light.ttf");
+}
+
+.presentacion, .nosotros, .queHacemos, .portfolio, .contacto {
+	width: 100%;
+	min-height:100vh; /*solo por ahora*/)
+}
+
+.presentacion{
+	position: relative;
+	height:100vh;
+}
+
+
+.presentacion-contenido{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: -2;
+	background-color: black;
+	overflow: hidden;
+}
+
+.presentacion-contenido img {
+	width: 100%;
+	height: 110%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+.presentacion-subtitle {
+	margin-top: 4%;
+	color:white;
+	font-size: 50px;
+	text-align: right;
+	font-family: dosisLight;
+	letter-spacing: 5px;
+	margin-left: 85px;
+	margin-right: 5%;
+	margin-bottom: -20px;
+}
+
+.presentacion-title {
+	margin-left: 85px;
+	margin-right: 5%;
+	text-align: right;
+	color:white;	
+	font-family: dosisBold;
+	font-size: 10vw;
+	letter-spacing: 15px;
+}
+.presentacion-title span {
+	font-family: dosis;
+}
+
+.presentacion-p{
+	margin-left: 85px;
+	margin-right: 5%;
+	padding-left: 20%;
+	text-align: right;
+	color: #e8e86c;	
+	font-size: 30px;
+	font-family: dosisLight;
+}
+
+.presentacion-sideline-img{
+	position: absolute;
+	width: 100%;
+	max-width: 80px;
+	top: 40px;
+	right: -40%;
+	padding-left: 10%;
+
+}
+
+.sideline, .presentacion-sideline {
+	position: relative;
+	width: 8%;
+	min-width: 70px;
+}
+
+.sideline a, .presentacion-sideline a {
+	display: inline-block;
+	margin-left: 93.5%;
+	margin-top: 80px;
+	height: 15px;
+	width: 15px;
+	border-radius: 100%;
+
+}
+
+
+
+.presentacion-sideline a {
+	margin-top: 13vh;
+}
+
+
+
+.presentacion-sideline {
+	height: 90%;
+	border-right: 1px solid white;
+}
+.presentacion-sideline a {
+	background-color: white;
+	transition: background-color .225s;
+}
+
+.presentacion-sideline a:hover{
+	background-color: #e8e86c;	
+}
+
+.presentacion-sideline p {
+	color: white;
+	font-size: 24px;
+	margin-left: 120%; /*modificar segun fuente*/
+	margin-top: 20%;
+	font-family: dosisBold;
+	letter-spacing: 3px;
+	-webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+
+
+.sideline {
+	height: 100vh;
+	top:0;
+	position: sticky;
+	position: -webkit-sticky;
+	z-index: 1;
+	border-right: 1px solid black;
+
+}
+
+.sideline a {
+	background-color: black;	
+}
+
+.nosotros, .queHacemos {
+	position: relative;
+}
+.nosotros{
+	margin-top: -100vh;
+}
+.nosotros-contenido, .queHacemos-contenido{
+	margin-left: 15%;
+	width: 85%;
+	display: flex;
+	flex-wrap: wrap;
+	padding-bottom: 50px;
+}
+
+.nosotros-title, .queHacemos-title {
+	color: #221f1f;
+	padding-top: 50px;
+	padding-left: 15%;
+	text-align: center;
+	font-size: 50px;
+	letter-spacing: 1px;
+	font-family: dosisBold;
+}
+
+.queHacemos-title{
+	margin: auto;
+	width: 65%;
+}
+
+.nosotros-subtitle, .queHacemos-subtitle {
+	color: #e8e86c;
+	width: 30%;
+	margin: auto;
+	text-align: center;
+	font-size: 30px;
+	font-family: dosisLight;	
+	margin-bottom: 25px;
+	padding-left: 15%;
+}
+
+.nosotros-persona{
+	display: inline-block;
+	width: 200px;
+	margin: 40px;
+}
+
+@media only screen and (max-width: 988px) {
+	.nosotros-contenido{
+		justify-content: space-around;
+	}
+}
+.nosotros-persona-nombre, .nosotros-persona-separador  {
+	text-align: center;
+	font-family: dosisBold;
+	color: #221f1f;
+	font-size: 25px;
+	letter-spacing: 3px;
+}
+.nosotros-persona-separador {
+	font-size: 30px;
+}
+.nosotros-persona-descripcion, .queHacemos-descripcion{
+	text-align: center;
+	font-family: dosisLight;
+	color: #221f1f;
+	font-size: 20px;
+	letter-spacing: 1px;
+	letter-spacing: 0;
+}
+
+
+
+.queHacemos {
+	background: #e8e86c; 
+  	background: -webkit-linear-gradient(left, #e8e86c , #bdd9ad); 
+  	background: -o-linear-gradient(right, #e8e86c, #bdd9ad); 
+  	background: -moz-linear-gradient(right, #e8e86c, #bdd9ad);
+	background: linear-gradient(to right, #e8e86c , #bdd9ad); 
+	padding-right: 8%;
+	width: 92%;
+}
+
+.queHacemos-subtitle{
+	color: white;
+}
+
+.queHacemos-contenido{
+	justify-content: space-around;
+}
+
+.queHacemos-articulo{
+	width: 280px;
+}
+
+.queHacemos-articulo img {
+	margin-left: 40%;
+	width: 60px;
+}
+#queHacemos-articulo--masGrande{
+	width:100px;
+}
+.queHacemos-nombre{
+	text-align: center;
+	font-family: dosisBold;
+	color: white;
+	font-size: 25px;
+	letter-spacing: 3px;
+}
+
+.portfolio, .contacto {
+	background-color: white;
+	padding-left: 18%;
+	padding-right: 5%;
+	width: 77%;
+}
+
+.contacto {
+	background-color: white;
+	margin-bottom: 60px;
+}
+.portfolio-title, .contacto-title {
+	color: #221f1f;
+	padding-top: 50px;
+	font-size: 50px;
+	letter-spacing: 1px;
+	font-family: dosisBold;
+	padding-bottom: 10px;
+}
+.portfolio-contenido {
+	display: flex;
+	flex-wrap: wrap-reverse;
+	margin-top: 50px;
+}
+
+.portfolio-album {
+	width: 740px;
+	min-height: 400px;
+	height: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.portfolio-album-foto{
+	margin-top: 20px;
+	margin-left: 20px;
+	background-color: #221f1f;
+	height: 200px;
+	min-width: 200px;
+	color: white;
+	display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column; /* column | row */
+}
+
+.portfolio-album-foto-desc{
+
+	text-align: center;
+	font-family: dosis;
+}
+.portfolio-album-foto-nombre{
+	font-family: dosisLight;
+	text-align: center;
+	text-transform: uppercase;
+}
+#foto1 {
+	width: 43%;
+}
+#foto2 {
+	width: 50%;	
+}
+#foto3 {
+	width: 30%
+}
+#foto4 {
+	width: 63%;
+}
+
+.portfolio-description {
+	position: relative;
+	display: inline-block;
+	width: 200px;
+	margin-left: 20px;
+	font-family: dosis;
+	font-size: 17px;
+	letter-spacing: 2px;
+	background-color: transparent;
+}
+
+.portfolio-description-text {
+	position: absolute;
+	top: 20px;
+	left: 0;
+}
+.portfolio-description-img{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 140px;
+}
+
+.portfolio-subtitle,.contacto-form-p {
+	color: #bdd9ad;
+	font-family: dosis;
+	font-size: 26px;
+	letter-spacing: 2px;
+}
+
+
+@media only screen and (max-width: 865px) {
+	#foto1, #foto2, #foto3, #foto4{
+		margin: 20px auto 0;
+		width: 80%;
+	}
+}
+
+
+@media only screen and (max-width: 1246px) {
+	.portfolio-description{
+		width: 740px;
+		height: 130px;
+	}
+	.portfolio-description-text{
+		top: 0;
+		margin-top: 20px;
+		position: relative;
+	}
+
+	.portfolio-description-img {
+		top:-20px;
+		margin-right: 50%;
+	}
+}
+
+.contacto-info {
+	color: #221f1f;
+	font-family: dosisBold;
+	letter-spacing: 1px;
+	font-size: 24px;
+}
+
+.contacto-form {
+	margin-top: 70px;
+	width: 100%;
+	max-width: 600px;
+}
+
+.contacto-form input[type=text], .contacto-form textarea {
+	width: 100%;
+	margin-top: 20px;
+	height: 30px;
+	padding: 5px;
+	-webkit-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	border: 0;
+	background-color: #a7a9ab;
+	font-family: dosis;
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: white;
+}
+
+.contacto-form textarea {
+	height: 100px;
+	resize: none;
+}
+
+.contacto-form input[type=text]::placeholder,.contacto-form textarea::placeholder{
+	color: white;
+}
+
+.contacto-form input[type=submit] {
+	background-color: #221f1f;
+	color: white;
+	font-family: dosisLight;
+	margin-top: 20px;
+	padding: 2px 20px;
+	letter-spacing: 1px;
+	font-size: 16px;
+	border: 0;
+	cursor: pointer;
+}
+
+.contacto-form textarea:focus, .contacto-form input[type=text]:focus {
+    outline: none !important;
+    border:2px solid #bdd9ad;
+    box-shadow: none;
+    padding: 3px;
+}
+
+
+
+i {
+	position: absolute;
+  	border: solid white;
+  	border-width: 0 3px 3px 0;
+  	display: inline-block;
+  	padding: 3px;
+  	left: 96%;
+  	bottom: 0;
+
+}
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.footer {
+	min-height: 70px;
+	background-color: black;
+	background: #e4e551; 
+  	background: -webkit-linear-gradient(left, #e4e551 , #d7e164); 
+  	background: -o-linear-gradient(right, #e4e551, #d7e164); 
+  	background: -moz-linear-gradient(right, #e4e551, #d7e164);
+	background: linear-gradient(to right, #e4e551 , #d7e164); 
+	position: absolute;
+	width: 92%;
+	z-index: 100;
+	font-family: dosis;
+	font-size: 20px;
+	display: flex;
+	align-items: center;
+	padding: 10px 4%;
+	flex-wrap: wrap;
+}
+
+.footer-media {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 270px;
+}
+
+.footer-media-img {
+	width: 60px;
+	transition: opacity 0.2s, filter 0.2s;
+}
+.footer-media-img:hover{
+	opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}
+.footer-cpr{
+	flex-grow:4;
+	min-width: 200px;
+}
+.footer-media-p, .footer-media-img{
+	display: inline-block;
+}
+
+@media only screen and (max-width: 435px) {
+	.presentacion-sideline{
+		visibility: hidden;
+	}
+	.presentacion-subtitle{
+		margin-left: 5%;
+		padding-right: 5%;
+	}
+	.presentacion-title{
+		margin-left: 5%;
+		text-align: center;
+		font-size: 17vw;
+		letter-spacing: 3px;
+	}
+	.presentacion-p {
+		margin-left: 5%;
+		padding-right: 5%;
+		color:white;
+	}
+	.sideline{
+		visibility: hidden;
+	}
+	.nosotros-title,.queHacemos-title {
+		padding-left: 0;
+	}
+	.nosotros-subtitle, .queHacemos-subtitle{
+		width: 90%;
+		padding-left: 0;
+	}
+	.nosotros-contenido, .queHacemos-contenido{
+		width: 100%;
+		flex-direction: column;
+		justify-content: center;
+		margin: 0;
+
+	}
+	.nosotros-persona{
+		margin:auto;
+	}
+	.queHacemos{
+		padding: 0;
+		width: 100%;
+	}
+	.queHacemos-articulo{
+		width: 100%;
+	}
+	.portfolio,.contacto {
+		width: 100%;
+		padding: 0;
+	}
+	.portfolio-title,.contacto-title {
+		text-align: center;
+	}
+
+	.portfolio-subtitle,.contacto-form-p {
+		margin-left: 20px;
+	}
+
+}
+
+@media only screen and (max-height: 493px) {
+	.sideline {
+		visibility: hidden;
+	}
+}
+
+@media only screen and (max-height: 400px) {
+	.presentacion{
+		height: 400px;
+	}
+	.presentacion-sideline a{
+		margin-top: 50px;
+	}	
+}
+
+@media only screen and (max-width: 1064px) {
+	.sideline a, .presentacion-sideline a {
+		margin-left: 91.5%;
+	}
+}
